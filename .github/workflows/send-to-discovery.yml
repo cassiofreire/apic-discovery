@@ -3,9 +3,10 @@ name: Sync Discovered API with APIConnect
 on: [pull_request, workflow_dispatch, push]
 
 env:
-  API_HOST: apps.67e1947a1663f1a576018be0.eu1.techzone.ibm.com
-  PLATFORM_API_PREFIX: apim-mgmt-admin-tools
-  PROVIDER_ORG: pagonxt
+  API_HOST: apps.67e19777a503e6e92a9eab25.am1.techzone.ibm.com
+  PLATFORM_API_PREFIX: apim-demo-mgmt-api-manager-tools
+  PROVIDER_ORG: cp4i-demo-org
+  INSECURE_SKIP_TLS_VERIFY: True
   API_FOLDERS: APIFolder
 
 jobs:
