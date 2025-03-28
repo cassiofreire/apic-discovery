@@ -6,7 +6,6 @@ env:
   API_HOST: apps.67e19777a503e6e92a9eab25.am1.techzone.ibm.com
   # platform_api_prefix is not required to change for ApiConnect on Cloud
   PLATFORM_API_PREFIX: apim-demo-mgmt-platform-api-tools
-  INSECURE_SKIP_TLS_VERIFY: true
   PROVIDER_ORG: cp4i-demo-org
   API_FOLDERS: APIFolder
   
@@ -54,6 +53,7 @@ jobs:
         else if: env.API_FOLDERS
         api_folders: ${{ env.API_FOLDERS }}
         resync_check: ${{ needs.check_changes_job.outputs.action_changed && true || false }}
+        insecure_skip_tls_verify: true
     - name: Display the action-result
       run: |
         echo "Result of the action: ${{ steps.discover-apis.outputs.action-result }}"
