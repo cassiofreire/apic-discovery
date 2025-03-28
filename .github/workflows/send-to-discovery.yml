@@ -6,7 +6,6 @@ env:
   API_HOST: apps.67e19777a503e6e92a9eab25.am1.techzone.ibm.com
   PLATFORM_API_PREFIX: apim-demo-mgmt-platform-api-tools
   PROVIDER_ORG: cp4i-demo-org
-  INSECURE_SKIP_TLS_VERIFY: true
   API_FOLDERS: APIFolder
 
 jobs:
@@ -31,6 +30,7 @@ jobs:
         api_folders: ${{ env.API_FOLDERS }}
         resync_check: ${{ true }}
         git_diff: ${{ steps.difference-output.outputs.action_updates }}
+        insecure_skip_tls_verify: true
     - name: Display the action-result
       run: |
         echo "Result of the action: ${{ steps.discover-apis.outputs.action-result }}"
