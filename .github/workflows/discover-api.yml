@@ -3,10 +3,10 @@ name: Sync Discovered API with APIConnect
 on: [pull_request, workflow_dispatch, push]
 
 env:
-  API_HOST: <host-name>
-  PLATFORM_API_PREFIX: <platform-api>
-  PROVIDER_ORG: <porg-name>
-  API_FILES: <file/files name>
+  API_HOST: apps.67e1947a1663f1a576018be0.eu1.techzone.ibm.com
+  PLATFORM_API_PREFIX: apim-mgmt-admin-tools
+  PROVIDER_ORG: pagonxt
+  API_FOLDERS: APIFolder
 
 jobs:
   run-discovery:
