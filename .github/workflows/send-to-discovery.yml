@@ -6,7 +6,7 @@ env:
   API_HOST: apps.67e19777a503e6e92a9eab25.am1.techzone.ibm.com
   PLATFORM_API_PREFIX: apim-demo-mgmt-platform-api-tools
   PROVIDER_ORG: cp4i-demo-org
-  INSECURE_SKIP_TLS_VERIFY: True
+  INSECURE_SKIP_TLS_VERIFY: 'true'
   API_FOLDERS: APIFolder
 
 jobs:
